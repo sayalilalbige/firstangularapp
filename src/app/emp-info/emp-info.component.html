@@ -1,0 +1,20 @@
+<div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Emp-name</th>
+          <th>Technology</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+    
+      <tr *ngFor="let x of emp">
+          <!--<th scope="row">{{id+1}}</th>-->
+                    <td>{{x.ename}}</td>
+                    <td>{{x.tech}}</td>
+      </tr>
+         
+    </tbody>
+    </table>
+  </div>

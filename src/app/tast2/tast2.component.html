@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="#">
+      <img src="..\assets\d1.jpg" alt="logo" style="width:40px;">
+    </a>
+    
+    <!-- Links -->
+    <ul class="navbar-nav">
+        <li class="nav-item" *ngFor="let items of menu">
+      
+        <a class="nav-link" [routerLink]="[items]">{{items}}</a>
+      
+      
+       
+    
+    </li>
+    </ul>
+  </nav>
+  
+  <div class="container-fluid">
+    <h3>Welcome to my project</h3>
+    
+  </div>
+  
+
+
+
+
+  <!-- <a routerLink="/home" routerLinkActive="active" >Home</a>
+  <a routerLink="/aboutus" routerLinkActive="active">Aboutus</a>
+  <a routerLink="/contactus" routerLinkActive="active">Contactus</a>
+  <a routerLink="/services" routerLinkActive="active">Services</a> -->
+  
+
+  <!-- <nav>
+      
+    <li class="nav-item" *ngFor="let items of menu">
+    <a class="nav-link" [routerLink]="[items]">{{items}}</a>
+  </li>
+</ul>
+</nav> -->
+
+<router-outlet></router-outlet>
+ <app-sidebar1></app-sidebar1>
+
+
+<app-footer></app-footer>

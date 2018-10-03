@@ -1,0 +1,70 @@
+
+<div class="container">
+  <div class="col-md-5">
+      <div class="form-area">  
+          <form  #studentform="ngForm"(ngSubmit)="onSubmit(studentform.value)" novalidate>
+          <br style="clear:both">
+                      <h3 style="margin-bottom: 25px; text-align: center;">Student Form</h3>
+                      <div class="form-group">
+                          <label>Name</label> 
+               <input type="text" #nameRef="ngModel" class="form-control" required minlength="3" name="name" placeholder="Name" ngModel >
+            
+               <div *ngIf="nameRef.errors && (nameRef.dirty || nameRef.touched)"class="alert alert-danger">
+              <div [hidden]="!nameRef.errors.required">
+                Please Enter Name
+               </div>
+               <div [hidden]="!nameRef.errors.minlength">
+                  Please Enter atleast 4 character
+                 </div>
+
+
+
+            </div>
+              </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="text" ngModel class="form-control" name="email" placeholder="Email" >
+            </div>
+            <div class="form-group">
+              <label>Mobile Number</label>
+              <input type="text" pattern="^[6-9][0-9]{9}$" #mobileRef="ngModel" maxlength="10" class="form-control" name="mobile" placeholder="Mobile Number"ngModel required >
+              <div *ngIf="mobileRef.errors && (mobileRef.dirty || mobileRef.touched)"class="alert alert-danger">
+                  <div [hidden]="!mobileRef.errors.required">
+                    Please Enter Mobile number
+                   </div>
+                   <div [hidden]="!mobileRef.errors.maxlength">
+                      Please Enter valid mobile number
+                     </div>
+                     <div [hidden]="!mobileRef.errors.pattern">
+                        Please valid Mobile number
+                       </div>
+    
+    
+    
+                </div>
+            
+            
+            
+            </div>
+            
+            
+            <div ngModelGroup="address">
+            <div class="form-group">
+               <label>City</label>
+              <input type="text" [ngModel]="city" class="form-control" name="city" placeholder="city" >
+            </div>
+            
+            
+            <div class="form-group">
+              <label>state</label>
+              <input type="text" [(ngModel)]="state" class="form-control" name="state" placeholder="state" >
+            
+            </div>
+          </div>
+                     
+              
+          <button [disabled]="!studentform.form.valid"type="submit" name="submit" class="btn btn-primary pull-right">Submit Form</button>
+          </form>
+      </div>
+  </div>
+  </div>

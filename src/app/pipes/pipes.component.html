@@ -1,0 +1,40 @@
+<input [(ngModel)]="fname" type="text" class="form-control mb-2 mr-sm-2"placeholder="First name">
+<tr></tr>
+<input [(ngModel)]="lname" type="text" class="form-control mb-2 mr-sm-2"placeholder="Last name">
+<tr></tr>
+<input [(ngModel)]="email" type="email" text="text"class="form-control mb-2 mr-sm-2"placeholder="email">
+<tr></tr>
+
+<input [(ngModel)]="DOB" type="date" text="date"class="form-control mb-2 mr-sm-2"placeholder="DOB"><tr>
+</tr>
+<input [(ngModel)]="age" type="number" text="text"class="form-control mb-2 mr-sm-2"placeholder=""age>
+<tr></tr>
+<button type="submit" class="btn btn-primary mb-2"(click)="add()">Add</button>
+
+
+<!-- <table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">FirstName</th>
+
+      <th scope="col">LastName</th>
+      <th scope="col">Salary</th>
+      <th scope="col">%inc</th>
+      <th scope="col">DOJ</th>
+      <th scope="col">pakage</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let x of test; let i = index">
+    <td>{{x.fname|slice:0:1}}{{x.lname|slice:0:1}}{{i+1}}</td>
+     <td>{{x.fname|uppercase}}</td>
+     <td>{{x.lname|lowercase}}</td>
+     <td>{{x.salary|currency}}</td>
+     <td>{{x.per_incr|percent}}</td>
+     <td>{{x.doj}}</td>
+     <td>{{x.salary|salaryCalci:12}}</td>
+    </tr>
+    </tbody>
+    </table> -->
